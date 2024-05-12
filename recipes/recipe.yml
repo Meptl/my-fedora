@@ -46,10 +46,6 @@ modules:
       remove:
         # - org.gnome.eog
 
-  - type: script
-    scripts:
-      - nix.sh
-
   - type: yafti
     custom-flatpaks:
       - Krita: org.kde.krita

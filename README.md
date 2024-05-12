@@ -1,24 +1,26 @@
 # Fume
 My personal variant of [Fedora Atomic](https://fedoraproject.org/atomic-desktops/)
-based off [BlueBuild](https://blue-build.org/)
+based off [wayblue](https://github.com/wayblueorg/wayblue/)
+a variant of [BlueBuild](https://blue-build.org/)
+
+Simply includes a few more packages that I'd add on a default system.
 
 TODO: Migrate from home-manager to a simple repo based off chezmoi and use that
 bluebuild module.
 For now, run `home-manager switch -b backup` after creating a user.
 
-# Build
-Github Actions should automatically build and push to ghcr.io.
+# Usage
+On an already running Fedora Atomic system
+```
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/fume:40
+```
 
+# Test
 To build locally:
 ```
 bluebuild build ./recipes/recipe.yml
 ```
 
-
-# Installation
-```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/fume:40
-```
 
 # Misc Tasks
 ## Generate Keys
