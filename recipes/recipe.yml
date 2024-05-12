@@ -48,4 +48,13 @@ modules:
     scripts:
       - nix.sh
 
+  - type: yafti
+    custom-flatpaks:
+      - Krita: org.kde.krita
+      - Ardour: org.ardour.Ardour
+      - Godot: org.godotengine.Godot
+      - Blender: org.blender.Blender
+      - OBS: com.obsproject.Studio
+      - Steam: com.valvesoftware.Steam
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
