@@ -1,0 +1,4 @@
+prompt_toolkit
+rich
+
+pgpt_python
