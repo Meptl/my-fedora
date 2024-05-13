@@ -38,7 +38,7 @@ modules:
       install:
         - org.keepassxc.KeePassXC
         - org.signal.Signal
-        - org.spacingbat3.webcord
+        - io.github.spacingbat3.webcord
         - com.discordapp.Discord  # webcord doesn't have hardware acceleration.
         - org.audacityteam.Audacity
         - im.riot.Riot  # element-desktop
