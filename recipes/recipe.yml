@@ -21,6 +21,7 @@ modules:
       - tldr
       - mpv
       - syncthing
+      - NetworkManager-tui
       # - greetd
       # - gtkgreet
 
@@ -37,9 +38,6 @@ modules:
     system:
       install:
         - org.keepassxc.KeePassXC
-        - org.signal.Signal
-        - io.github.spacingbat3.webcord
-        - com.discordapp.Discord  # webcord doesn't have hardware acceleration.
         - org.audacityteam.Audacity
         - im.riot.Riot  # element-desktop
         # - org.mozilla.firefox
