@@ -8,26 +8,23 @@ nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 
-# Setup SSH keys for GitHub.
-ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
-# Prompt the user to add the SSH key to their GitHub account.
-echo
-echo "Please add the following SSH key to your GitHub account:"
-echo
-cat ~/.ssh/id_ed25519.pub
-echo
-read -p "Press enter when you've added the key to your GitHub account: "
-
-
-git clone git@gitlab.com:meptl/nixos-conf
-
+git clone https://gitlab.com:meptl/home-manager-conf ~/.config/home-manager
 
 # Install home-manager
 nix-shell '<home-manager>' -A install
-rm -rf ~/.config/home-manager
-ln -s ~/nixos-conf/home ~/.config/home-manager
 home-manager switch -b backup
 
 # Waydroid. Mostly here as a reference.
 # rpm-ostree install waydroid
 # waydroid init -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor -s GAPPS
+
+# FLATPAK_BINS=/var/lib/flatpak/exports/bin
+# mkdir ~/bin
+# cd ~/bin
+# ln -s $FLATPAK_BINS/com.discordapp.Discord discord
+# ln -s $FLATPAK_BINS/im.riot.Riot element-desktop
+# ln -s $FLATPAK_BINS/io.github.spacingbat3.webcord webcord
+# ln -s $FLATPAK_BINS/org.audacityteam.Audacity audacity
+# ln -s $FLATPAK_BINS/org.keepassxc.KeePassXC keepassxc
+# ln -s $FLATPAK_BINS/org.signal.Signal signal-desktop
+# cd -

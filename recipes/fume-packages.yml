@@ -1,0 +1,8 @@
+type: rpm-ostree
+install:
+  - ardour
+  - krita
+  - godot
+  - blender
+  - obs-studio
+  - steam
