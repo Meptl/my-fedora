@@ -10,24 +10,24 @@ bluebuild module.
 For now, run `home-manager switch -b backup` after creating a user.
 
 # Usage
+## Iso
+Manually trigger the build-iso github image.
+Run `first-time-user-setup.sh` available in your user's home directory.
+The script will install nix and setup home-manager.
+
+## rpm-ostree
 On an already running Fedora Atomic system
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/fume:40
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/fume:latest
 ```
+if you're already running off this image `rpm-ostree upgrade` is sufficient
 
 # Test
-To build locally:
+The following builds the container image similar to github:
 ```
 bluebuild build ./recipes/recipe.yml
 ```
-
-
-# Misc Tasks
-## Generate Keys
-If you ever need to regenerate keys `cosign generate-key-pair` and update
-SIGNING_SECRET in GitHub Action secrets with the private key.
-
-## Generate ISO
+To build an iso image similar to github:
 ```
 mkdir ./iso-output
 sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
@@ -35,5 +35,10 @@ ghcr.io/jasonn3/build-container-installer:latest \
 -e IMAGE_REPO=ghcr.io/meptl \
 -e IMAGE_NAME=fume \
 -e IMAGE_TAG=40 \
--e VARIANT=Sericea
+-e VARIANT=Hyprland
 ```
+
+# Misc Tasks
+## Generate Keys
+If you ever need to regenerate keys `cosign generate-key-pair` and update
+SIGNING_SECRET in GitHub Action secrets with the private key.

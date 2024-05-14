@@ -26,6 +26,7 @@ modules:
       - NetworkManager-tui
       - keepassxc
       - audacity
+      - discord
       # - greetd
       # - gtkgreet
 
@@ -42,7 +43,9 @@ modules:
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
-      install:
+      ijstall:
+        - io.github.spacingbat3.webcord
+        - org.signal.Signal
         - im.riot.Riot  # element-desktop
         # - org.mozilla.firefox
       remove:

@@ -8,7 +8,9 @@ nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 
-git clone https://gitlab.com:meptl/home-manager-conf ~/.config/home-manager
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+
+git clone https://gitlab.com/meptl/home-manager-conf ~/.config/home-manager
 
 # Install home-manager
 nix-shell '<home-manager>' -A install
