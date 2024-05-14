@@ -1,8 +1,10 @@
 type: rpm-ostree
+repos:
+  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
 install:
-  - ardour
+  - ardour8
   - krita
   - godot
   - blender
   - obs-studio
-  - steam
