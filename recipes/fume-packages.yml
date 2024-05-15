@@ -1,10 +1,18 @@
-type: rpm-ostree
-repos:
-  - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-  - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
-install:
-  - ardour8
-  - krita
-  - godot
-  - blender
-  - obs-studio
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+    install:
+      - ardour8
+      - krita
+      - godot
+      - blender
+      - obs-studio
+      - waydroid
+
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - com.valvesoftware.Steam

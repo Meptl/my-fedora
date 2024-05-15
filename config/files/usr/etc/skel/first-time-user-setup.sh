@@ -2,6 +2,9 @@
 
 set -oue pipefail
 
+# Set default shell
+chsh -c /bin/zsh
+
 # Install nix.
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install ostree --no-confirm
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
@@ -19,14 +22,3 @@ home-manager switch -b backup
 # Waydroid. Mostly here as a reference.
 # rpm-ostree install waydroid
 # waydroid init -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor -s GAPPS
-
-# FLATPAK_BINS=/var/lib/flatpak/exports/bin
-# mkdir ~/bin
-# cd ~/bin
-# ln -s $FLATPAK_BINS/com.discordapp.Discord discord
-# ln -s $FLATPAK_BINS/im.riot.Riot element-desktop
-# ln -s $FLATPAK_BINS/io.github.spacingbat3.webcord webcord
-# ln -s $FLATPAK_BINS/org.audacityteam.Audacity audacity
-# ln -s $FLATPAK_BINS/org.keepassxc.KeePassXC keepassxc
-# ln -s $FLATPAK_BINS/org.signal.Signal signal-desktop
-# cd -
