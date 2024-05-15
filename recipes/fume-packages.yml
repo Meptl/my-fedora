@@ -10,6 +10,7 @@ modules:
       - blender
       - obs-studio
       - waydroid
+      - waydroid-selinux
 
   - type: default-flatpaks
     notify: true
