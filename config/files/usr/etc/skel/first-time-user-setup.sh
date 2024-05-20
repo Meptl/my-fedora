@@ -22,3 +22,14 @@ home-manager switch -b backup
 # Waydroid. Mostly here as a reference.
 # rpm-ostree install waydroid
 # waydroid init -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor -s GAPPS
+# If you have some SELinux issues, Run waydroid with setenforce 0, create a policy with
+# sudo grep waydroid /var/log/audit/audit.log | audit2allow -M waydroid-extra
+# sudo semodule -i waydroid.pp
+#
+#
+# Install libndk from waydroid_script
+# https://github.com/casualsnek/waydroid_script#install-libndk-arm-translation
+
+
+# Issue with flatpak installer service
+# sudo authselect disable-feature with-fingerprint

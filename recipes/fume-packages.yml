@@ -5,12 +5,17 @@ modules:
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     install:
       - ardour8
-      - krita
       - godot
       - blender
       - obs-studio
       - waydroid
-      - waydroid-selinux
+
+      - rocm-opencl
+      - rocm-hip
+      - rocm-runtime
+      - rocm-opencl-devel
+      - rocm-hip-devel
+      - rocm-runtime-devel
 
   - type: default-flatpaks
     notify: true
