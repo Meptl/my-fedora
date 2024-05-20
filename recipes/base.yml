@@ -1,11 +1,3 @@
-# image will be published to ghcr.io/<user>/<name>
-name: fume
-description: This is my personal OS image.
-
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/wayblueorg/hyprland
-image-version: latest # latest is the only supported tag
-
 modules:
   - type: files
     files:

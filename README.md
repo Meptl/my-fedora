@@ -11,21 +11,22 @@ For now, run `home-manager switch -b backup` after creating a user.
 
 # Usage
 ## Iso
-Manually trigger the build-iso github image.
+For new systems, we can create a LiveCD with the system pre-installed.
+Manually trigger the build-iso github workflow.
 Run `first-time-user-setup.sh` available in your user's home directory.
 The script will install nix and setup home-manager.
 
 ## rpm-ostree
-On an already running Fedora Atomic system
+On an already running Fedora Atomic system, replace HOST for the hostname in:
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/fume:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/meptl/HOST:latest
 ```
-if you're already running off this image `rpm-ostree upgrade` is sufficient
+if you're already running off the image `rpm-ostree upgrade` is sufficient
 
 # Test
 The following builds the container image similar to github:
 ```
-bluebuild build ./recipes/recipe.yml
+bluebuild build ./recipes/fume.yml
 ```
 To build an iso image similar to github:
 ```
