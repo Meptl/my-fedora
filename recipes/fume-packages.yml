@@ -1,14 +1,15 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+      - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-%OS_VERSION%/patrickl-yabridge-fedora-%OS_VERSION%.repo
     install:
       - ardour8
+      - calf
+      - yabridge
+
       - godot
       - blender
       - obs-studio
-      - waydroid
 
       - rocm-opencl
       - rocm-hip
@@ -16,6 +17,11 @@ modules:
       - rocm-opencl-devel
       - rocm-hip-devel
       - rocm-runtime-devel
+
+      - libvirt-daemon-kvm
+      - libvirt-daemon-config-network
+      - qemu-kvm
+      - virt-manager
 
   - type: default-flatpaks
     notify: true
