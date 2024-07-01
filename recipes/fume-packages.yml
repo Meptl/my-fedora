@@ -1,11 +1,8 @@
 modules:
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-40/patrickl-yabridge-fedora-40.repo
     install:
       - ardour8
       - calf
-      - yabridge
 
       - godot
       - blender
