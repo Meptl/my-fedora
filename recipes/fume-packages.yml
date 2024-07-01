@@ -1,7 +1,7 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-%OS_VERSION%/patrickl-yabridge-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-40/patrickl-yabridge-fedora-40.repo
     install:
       - ardour8
       - calf
