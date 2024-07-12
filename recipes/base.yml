@@ -20,8 +20,7 @@ modules:
       - keepassxc
       - audacity
       - gron
-      # - greetd
-      # - gtkgreet
+      - strace
 
     remove:
       - swaylock
