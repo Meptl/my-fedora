@@ -21,6 +21,7 @@ modules:
       - audacity
       - gron
       - strace
+      - rofimoji
 
     remove:
       - swaylock
