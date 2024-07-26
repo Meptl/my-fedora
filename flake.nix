@@ -17,8 +17,8 @@
       buildInputs = with pkgs; [
         pre-commit
 
-        cosign
-        bluebuild.packages.${system}.default
+        # cosign
+        # bluebuild.packages.${system}.default
       ];
 
       shellHook = ''

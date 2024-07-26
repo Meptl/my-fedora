@@ -3,6 +3,10 @@ modules:
     install:
       - ardour8
       - calf
+      - lv2-calf-plugins
+      - lv2-calf-plugins-gui
+      - zynaddsubfx
+      - zynaddsubfx-lv2
 
       - godot
       - blender
@@ -19,6 +23,8 @@ modules:
       - libvirt-daemon-config-network
       - qemu-kvm
       - virt-manager
+
+      - wireshark
 
   - type: default-flatpaks
     notify: true
