@@ -8,6 +8,8 @@ modules:
       - zynaddsubfx
       - zynaddsubfx-lv2
 
+      - pipx
+
       - godot
       - blender
       - obs-studio
