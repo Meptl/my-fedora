@@ -38,7 +38,6 @@ modules:
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       install:
-        - io.github.spacingbat3.webcord
         - org.signal.Signal
         - im.riot.Riot  # element-desktop
         - com.github.tchx84.Flatseal

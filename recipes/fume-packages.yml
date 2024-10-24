@@ -7,6 +7,9 @@ modules:
       - lv2-calf-plugins-gui
       - zynaddsubfx
       - zynaddsubfx-lv2
+      - ladspa-tap-plugins
+
+      - ydotool
 
       - pipx
 
