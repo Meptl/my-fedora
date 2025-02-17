@@ -9,9 +9,10 @@ modules:
       - zynaddsubfx-lv2
       - ladspa-tap-plugins
 
+      - radeontop
       - ydotool
 
-      - pipx
+      - nodejs-npm
 
       - godot
       - blender
@@ -28,8 +29,6 @@ modules:
       - libvirt-daemon-config-network
       - qemu-kvm
       - virt-manager
-
-      - wireshark
 
   - type: default-flatpaks
     notify: true
