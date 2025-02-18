@@ -14,6 +14,7 @@ modules:
       - mesa-va-drivers
       - git-lfs
       - zsh
+      - neovim
       - fzf
       - htop
       - cronie
