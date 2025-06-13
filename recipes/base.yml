@@ -2,14 +2,6 @@ modules:
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system
-                  # in /usr/etc/ in the image. read more in files module reference.
-
-  # - type: rpm-ostree
-  #   repos:
-      # - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-      # - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - mesa-va-drivers
       - git-lfs
@@ -31,15 +23,9 @@ modules:
       - rofimoji
       - helvum
       - xrandr
-
     remove:
       - swaylock
       - swayidle
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
   - from-file: fume-packages.yml
 
   - type: default-flatpaks
