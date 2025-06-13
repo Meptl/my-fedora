@@ -2,6 +2,8 @@ modules:
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
+
+  - type: rpm-ostree
     install:
       - mesa-va-drivers
       - git-lfs
@@ -26,8 +28,6 @@ modules:
     remove:
       - swaylock
       - swayidle
-  - from-file: fume-packages.yml
-
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
